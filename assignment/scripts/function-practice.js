@@ -120,19 +120,19 @@ console.log('TEST - should say 216', sumAll(numbers));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-/*
-function listPositive(arr) {
+
+function listPositive(array) {
   let positiveArray =[];
-  for (let num of arr) {
-    if(num > 0){
-      arr.push(num);
+  for (let i = 0; i < array.length; i++) {
+    if(array[i] > 0){
+      positiveArray.push(array[i]);
     }//end if
   }//end for
-//  return positiveArray;
+  return positiveArray;
 }//end function
 arrayWithNegative = [3, 6, 9, 2, -4, -6, 45];
-console.log('TEST should say [3, 6, 9, 2, 45]', listPositive(arrayWithNegative));
-*/
+console.log('TEST - should say return array with 5 items', listPositive(arrayWithNegative));
+
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
