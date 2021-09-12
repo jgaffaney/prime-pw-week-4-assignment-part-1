@@ -65,9 +65,29 @@ console.log('TEST - should say Robert', getLast(names));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
 
-}
+numbers = [9, 3, 5, 7, 44, 41, 77, 16, 14]
+function find( value, array ){
+  let answer;
+  for (let num of array) {
+    if (num === value) {
+      answer = true;
+      break;
+    } //end if
+      else {
+      answer = false;
+    }//end else
+  } //end for
+  return answer;
+}// end find
+
+console.log('TEST - should return true', find(44, numbers));
+console.log('TEST - Should return false', find(56, numbers));
+console.log('TEST - Should return false', find(true, numbers));
+console.log('TEST - Should return true', find(77, numbers));
+console.log('TEST - Should return true', find('Steven', names));
+console.log('TEST - Should return false', find(34, names));
+
 
 // ----------------------
 // Stretch Goals
